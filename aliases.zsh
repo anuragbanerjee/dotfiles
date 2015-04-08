@@ -1,4 +1,4 @@
-#!/bin.zsh
+#!/bin/zsh
 
 # ALIASES!
 
@@ -66,7 +66,7 @@ alias rm="rm -i"
 
 #LULZ
 alias {plz,please,s,sudo}='batman '
-alias {ty,thx,thanks}=respondToThanks
+alias {ty,thx,thanks}='respondToThanks'
 
 #SHORTCUTS
 alias py=python
@@ -76,12 +76,14 @@ alias cask='brew cask'
 
 # GIT
 alias g="git "
-alias gc="gitCommitWithMessage "
+alias {gc,gcm,gcmsg}="gitCommitWithMessage "
 alias gl="g pull "
 alias gcl="g clone "
 alias glg="g log "
 alias ga="g add "
-alias gs="g status "
+alias gaa="g add --all"
+alias {gs,gst}="g status "
+alias gp="g push "
 
 #PROGRAMS
 alias chrome='open -a /Applications/Google\ Chrome.app/ '

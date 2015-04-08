@@ -12,6 +12,10 @@ batman () {
 	echo "exiting batman mode..."
 }
 
+respondToThanks (){
+	echo "ur welcome"
+}
+
 gitCommitWithMessage (){
 	git commit -m "$*"
 }
