@@ -1,0 +1,94 @@
+#!/bin.zsh
+
+# ALIASES!
+
+# DIRECTORIES
+alias design='cd ~/design/'
+alias dev='cd ~/development/'
+alias dotfiles='cd ~/dotfiles/'
+alias freelance='cd ~/development/freelance/'
+alias hackathons='cd ~/development/hackathons/'
+alias drive='cd ~/Google\ Drive/'
+alias dropbox='cd ~/Dropbox/'
+alias illustratorpractice='cd ~/design/practice-illustrator/'
+alias pythonpractice='cd ~/development/practice/practice-python'
+alias repos='cd ~/development/repos'
+alias rubypractice='cd ~/development/practice/practice-ruby'
+alias notes='cd ~/documents/notes/'
+alias scripts='cd ~/development/scripts/'
+
+#PROJECTS
+alias acm='repos && cd acm'
+alias axon='repos && cd axon'
+alias blog='repos && cd blog'
+alias mysite='repos && cd personal-site'
+alias tardis='repos && cd tardis'
+
+#COMMANDS
+alias c=clear
+alias o='open .'
+alias t=touch
+alias back='cd $OLDPWD'
+alias {nomongo,killmongo}='mongo --eval "db.getSiblingDB('\''admin'\'').shutdownServer()"'
+alias cpwd='pwd | xclip -selection clipboard'
+alias ishere='find . -name '
+alias ip='ipconfig getifaddr en0'
+alias symlink='ln -s '
+alias server='python -m SimpleHTTPServer'
+alias history='fc -l 1'
+
+#NAVIGATION
+alias home='cd ~'
+alias root='cd /'
+
+#SCRIPTS
+alias autodelete='python ~/development/Scripts/autodelete.py'
+alias br='python '\''~/development/Scripts/batch-rename-filenames.py'\'
+alias fetch='python ~/development/Scripts/fetch-files.py '
+alias organize_book='python ~/development/Scripts/literature_organizer.py '
+alias stfu='osascript -e '\''set volume output muted true'\'' && open '\''~/Dropbox/Development/Scripts/Quit All Apps.app/'\'' && osascript '\''~/Dropbox/Development/Scripts/Toggle Notification Center.applescript'\'
+
+#CONFIGURATION FILES
+alias bconf='sub ~/.bashrc'
+alias {conf,zshconfig,zconf}='sub ~/.zshrc'
+alias aliases='sub ~/.aliases'
+alias functions='sub ~/.functions'
+alias plugins='cd ~/.oh-my-zsh/custom/plugins'
+alias ohmyzsh='sub ~/.oh-my-zsh'
+
+#TYPOS
+alias cd..='cd ..'
+alias {wpd,wdp,pdw,dwp,dpw}=pwd
+alias alaises="aliases"
+
+#OVERRIDES
+alias rm="rm -i"
+
+#LULZ
+alias {plz,please,s,sudo}='batman '
+alias {ty,thx,thanks}=respondToThanks
+
+#SHORTCUTS
+alias py=python
+alias py3=python3
+alias coffee=caffeinate
+alias cask='brew cask'
+
+# GIT
+alias g="git "
+alias gc="gitCommitWithMessage "
+alias gl="g pull "
+alias gcl="g clone "
+alias glg="g log "
+alias ga="g add "
+alias gs="g status "
+
+#PROGRAMS
+alias chrome='open -a /Applications/Google\ Chrome.app/ '
+alias firefox='open -a /opt/homebrew-cask/Caskroom/firefox/latest/Firefox.app/ '
+alias safari='open -a /Applications/Safari.app/ '
+alias pms='/Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Scanner'
+
+#APPLE TWEAKS
+alias normaldock='defaults write com.apple.dock static-only -bool FALSE && killAll Dock'
+alias staticdock='defaults write com.apple.dock static-only -bool TRUE && killAll Dock'
