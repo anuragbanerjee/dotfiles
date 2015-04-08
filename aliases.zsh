@@ -84,6 +84,8 @@ alias ga="g add "
 alias gaa="g add --all"
 alias {gs,gst}="g status "
 alias gp="g push "
+alias gch="git checkout "
+alias gb="git branch "
 
 #PROGRAMS
 alias chrome='open -a /Applications/Google\ Chrome.app/ '
