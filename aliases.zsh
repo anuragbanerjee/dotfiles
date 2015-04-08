@@ -85,6 +85,7 @@ alias gaa="g add --all"
 alias {gs,gst}="g status "
 alias gp="g push "
 alias gch="git checkout "
+alias gchb="gitNewBranch "
 alias gb="git branch "
 
 #PROGRAMS

@@ -20,6 +20,10 @@ gitCommitWithMessage (){
 	git commit -m "$*"
 }
 
+gitNewBranch (){
+	git checkout -b "$*"
+}
+
 getv () {
 	tv "$*" | xargs open
 }
