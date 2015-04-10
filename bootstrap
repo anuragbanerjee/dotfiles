@@ -4,7 +4,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 for dotfile in $( ls $DIR ); do
 	if [ -f $dotfile ]; then
-		if [[ $dotfile == *.zsh ]]
+		if [[ $dotfile == *.dotfile ]]
 		then
 			newdotfilename=$(basename "$dotfile")
 			newdotfilename="${newdotfilename%.*}"
