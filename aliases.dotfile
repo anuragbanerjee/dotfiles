@@ -26,9 +26,10 @@ alias mysite='repos && cd personal-site'
 alias tardis='repos && cd tardis'
 
 #COMMANDS
-alias c=clear
+alias c='clear'
 alias o='open .'
-alias t=touch
+alias t='touch '
+alias v='vim'
 alias back='cd $OLDPWD'
 alias {nomongo,killmongo}='mongo --eval "db.getSiblingDB('\''admin'\'').shutdownServer()"'
 alias cpwd='pwd | xclip -selection clipboard'
