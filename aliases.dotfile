@@ -3,6 +3,7 @@
 # ALIASES!
 
 # DIRECTORIES
+alias desktop='cd ~/desktop'
 alias design='cd ~/design/'
 alias dev='cd ~/development/'
 alias dotfiles='cd ~/dotfiles/'
