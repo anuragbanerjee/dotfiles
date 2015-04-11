@@ -37,6 +37,7 @@ alias ip='ipconfig getifaddr en0'
 alias symlink='ln -s '
 alias server='python -m SimpleHTTPServer'
 alias history='fc -l 1'
+alias preview="quick-look "
 
 #NAVIGATION
 alias home='cd ~'
@@ -68,6 +69,7 @@ alias rm="rm -i"
 #LULZ
 alias {plz,please,s,sudo}='batman '
 alias {ty,thx,thanks}='respondToThanks'
+alias {bye,adios,sayonara,close,exit}='exit'
 
 #SHORTCUTS
 alias py=python
