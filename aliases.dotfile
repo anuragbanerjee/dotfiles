@@ -53,9 +53,10 @@ alias stfu='osascript -e '\''set volume output muted true'\'' && open '\''~/Drop
 
 #CONFIGURATION FILES
 alias bconf='sub ~/.bashrc'
-alias {conf,zshconfig,zconf}='sub ~/.zshrc'
-alias aliases='sub ~/.aliases'
-alias functions='sub ~/.functions'
+alias {conf,zshconfig,zconf}='sub ~/dotfiles/zshrc.dotfile'
+alias aliases='sub ~/dotfiles/aliases.dotfile'
+alias functions='sub ~/dotfiles/functions.dotfile'
+alias vimrc='vim ~/dotfiles/vimrc.dotfile'
 alias plugins='cd ~/.oh-my-zsh/custom/plugins'
 alias ohmyzsh='sub ~/.oh-my-zsh'
 
@@ -91,6 +92,8 @@ alias gp="g push "
 alias gch="git checkout "
 alias gchb="gitNewBranch "
 alias gb="git branch "
+alias gd="git diff"
+alias gitconfig="git aliases"
 
 #PROGRAMS
 alias chrome='open -a /Applications/Google\ Chrome.app/ '
