@@ -10,10 +10,6 @@
 [alias]
 	shove = push -f
 	aliases= "!sub ~/.gitconfig"
-    cd = "!d=\"$(date -d \"$1\")\" && shift && \
-    git diff-index --cached --quiet HEAD --ignore-submodules -- && \
-    GIT_COMMITTER_DATE=\"$d\" git commit --amend -C HEAD --date \"$d\"" \
-    || echo >&2 "error: date change failed: index not clean!"
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
