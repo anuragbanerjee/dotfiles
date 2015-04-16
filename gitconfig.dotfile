@@ -1,0 +1,32 @@
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[include]
+	# for name, credentials, etc.
+	path = ~/.gitconfig.private
+[http]
+	cookiefile = /Users/anuragbanerjee/.gitcookies
+[alias]
+	shove = push -f
+	aliases= "!sub ~/.gitconfig"
+    cd = "!d=\"$(date -d \"$1\")\" && shift && \
+    git diff-index --cached --quiet HEAD --ignore-submodules -- && \
+    GIT_COMMITTER_DATE=\"$d\" git commit --amend -C HEAD --date \"$d\"" \
+    || echo >&2 "error: date change failed: index not clean!"
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[init]
+	templatedir = /Users/anuragbanerjee/.git-templates
+[mergetool "Kaleidoscope"]
+[merge]
+[difftool "Kaleidoscope"]
+[difftool]
+[mergetool]
+[diff]
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[push]
+	default = simple
