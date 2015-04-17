@@ -94,6 +94,8 @@ alias gchb="gitNewBranch "
 alias gb="git branch "
 alias gd="git diff"
 alias gitconfig="git aliases"
+alias gm="git merge"
+alias gr="git rebase"
 
 #PROGRAMS
 alias chrome='open -a /Applications/Google\ Chrome.app/ '
