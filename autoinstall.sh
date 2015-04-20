@@ -41,8 +41,8 @@ npm install -g yeoman
 # DOTFILES AND ALIASES
 #
 
-# mv -f ./zshrc      ~/.zshrc             # z-shell preferences and aliases
-# mv -f ./gitconfig  ~/.gitconfig         # git preferences and aliases
+# mv -f ./zshrc      ~/.zshrc           # z-shell preferences and aliases
+# mv -f ./gitconfig  ~/.gitconfig       # git preferences and aliases
 
 # 
 # GENERAL MUST-HAVES
@@ -68,6 +68,7 @@ brew cask install mailbox               # email
 # 
 
 brew install git                        # version control cli
+brew install hub                        # wrapper for git, github powers
 brew cask install github                # version control gui
 brew cask install android-studio        # android dev
 brew cask install sublime-text          # awesome text editor for coding

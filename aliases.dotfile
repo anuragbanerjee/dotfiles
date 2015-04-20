@@ -80,6 +80,7 @@ alias coffee=caffeinate
 alias cask='brew cask'
 
 # GIT
+alias {git,github}="hub"
 alias g="git "
 alias {gc,gcm,gcmsg}="gitCommitWithMessage "
 alias gl="g pull "
