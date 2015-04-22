@@ -98,6 +98,8 @@ alias gd="git diff"
 alias gitconfig="git aliases"
 alias gm="git merge"
 alias gr="git rebase"
+alias gprune="git remote prune origin"
+alias gpr="git pull-request"
 
 #PROGRAMS
 alias chrome='open -a /Applications/Google\ Chrome.app/ '
