@@ -10,6 +10,7 @@
 [alias]
 	shove = push -f
 	aliases= "!sub ~/.gitconfig"
+	edit = !$EDITOR $(git status --short | awk '$1 ~ /^M|A|U/ {print $2}' )
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
