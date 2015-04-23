@@ -7,10 +7,13 @@
 	path = ~/.gitconfig.private
 [http]
 	cookiefile = /Users/anuragbanerjee/.gitcookies
+[core]
+	editor = "vim"
 [alias]
 	shove = push -f
 	aliases= "!sub ~/.gitconfig"
 	edit = !$EDITOR $(git status --short | awk '$1 ~ /^M|A|U/ {print $2}' )
+	amend = "!git commit --amend"
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
