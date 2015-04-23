@@ -62,6 +62,7 @@ alias ohmyzsh='sub ~/.oh-my-zsh'
 
 #TYPOS
 alias cd..='cd ..'
+alias sub.='sub .'
 alias {wpd,wdp,pdw,dwp,dpw}=pwd
 alias alaises="aliases"
 
