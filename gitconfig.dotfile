@@ -12,6 +12,7 @@
 [alias]
 	shove = push -f
 	aliases= "!sub ~/.gitconfig"
+	config= "!sub ~/.gitconfig"
 	edit = !$EDITOR $(git status --short | awk '$1 ~ /^M|A|U/ {print $2}' )
 	amend = "!git commit --amend"
 [filter "hawser"]
@@ -30,3 +31,9 @@
 	insteadOf = git://github.com/
 [push]
 	default = simple
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[user]
+	name = Anurag Banerjee
