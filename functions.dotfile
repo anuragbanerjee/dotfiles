@@ -1,6 +1,13 @@
 #!/bin/zsh
 
-resource (){
+matchcreationtomodified() {
+	for f in "$@"
+		do
+		    SetFile -d "$(GetFileInfo -m "$f")" "$f"
+		done
+}
+
+resource () {
 	source ~/.zshrc
 }
 
@@ -12,20 +19,24 @@ batman () {
 	echo "exiting batman mode..."
 }
 
-respondToThanks (){
+respondToThanks () {
 	echo "ur welcome"
 }
 
-gitCommitWithMessage (){
+gitCommitWithMessage () {
 	git commit -m "$*"
 }
 
-gitNewBranch (){
+gitNewBranch () {
 	git checkout -b "$*"
 }
 
 getv () {
 	tv "$*" | xargs open
+}
+
+wolfram() {
+	wa "$*"
 }
 
 extract () {

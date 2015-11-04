@@ -1,8 +1,8 @@
-#!bin/bash
+#!/bin/bash
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-mkdir -p ~/Development/{"Scripts","Projects","Repos","Practice","Hackathons","Hackathon Organizing","Freelancing","Skillshare"}
+mkdir -p "~/Development/{"Scripts","Projects","Repos","Practice","Hackathons","Hackathon Organizing","Freelancing","Skillshare"}"
 
 # 
 # COMMAND LINE TOOLS

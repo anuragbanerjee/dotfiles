@@ -17,19 +17,23 @@ alias repos='cd ~/development/repos'
 alias rubypractice='cd ~/development/practice/practice-ruby'
 alias notes='cd ~/documents/notes/'
 alias scripts='cd ~/development/scripts/'
+alias practice='dev && cd practice'
 
-#PROJECTS
+# PROJECTS
 alias acm='repos && cd acm'
 alias axon='repos && cd axon'
 alias blog='repos && cd blog'
 alias mysite='repos && cd personal-site'
 alias tardis='repos && cd tardis'
 
-#COMMANDS
+# COMMANDS
 alias c='clear'
 alias o='open .'
 alias t='touch '
 alias v='vim'
+alias b='bundle'
+alias rs='rails s'
+alias cl='clear && l'
 alias back='cd $OLDPWD'
 alias {nomongo,killmongo}='mongo --eval "db.getSiblingDB('\''admin'\'').shutdownServer()"'
 alias cpwd='pwd | xclip -selection clipboard'
@@ -40,20 +44,23 @@ alias server='python -m SimpleHTTPServer'
 alias history='fc -l 1'
 alias preview="quick-look "
 
-#NAVIGATION
+# NAVIGATION
 alias home='cd ~'
 alias root='cd /'
 
-#SCRIPTS
+# SCRIPTS
 alias autodelete='python ~/development/Scripts/autodelete.py'
 alias br='python '\''~/development/Scripts/batch-rename-filenames.py'\'
 alias fetch='python ~/development/Scripts/fetch-files.py '
 alias organize_book='python ~/development/Scripts/literature_organizer.py '
 alias stfu='osascript -e '\''set volume output muted true'\'' && open '\''~/Dropbox/Development/Scripts/Quit All Apps.app/'\'' && osascript '\''~/Dropbox/Development/Scripts/Toggle Notification Center.applescript'\'
+alias wa='ruby ~/desktop/wolfram_alpha.rb '
+alias managetv='scripts && py manageMedia-TV.py '
 
-#CONFIGURATION FILES
+# CONFIGURATION FILES
 alias bconf='sub ~/.bashrc'
 alias {conf,zshconfig,zconf}='sub ~/dotfiles/zshrc.dotfile'
+alias {sshconf,sshconfig}='sub ~/.ssh/config'
 alias aliases='sub ~/dotfiles/aliases.dotfile'
 alias functions='sub ~/dotfiles/functions.dotfile'
 alias vimrc='vim ~/dotfiles/vimrc.dotfile'
@@ -65,49 +72,71 @@ alias cd..='cd ..'
 alias sub.='sub .'
 alias {wpd,wdp,pdw,dwp,dpw}=pwd
 alias alaises="aliases"
+alias oh='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
-#OVERRIDES
+# OVERRIDES
 alias rm="rm -i"
 
-#LULZ
+# LULZ
 alias {plz,please,s,sudo}='batman '
 alias {ty,thx,thanks}='respondToThanks'
 alias {bye,adios,sayonara,close,exit}='exit'
+alias cat='lolcat '
 
-#SHORTCUTS
+# SHORTCUTS
 alias py=python
 alias py3=python3
 alias coffee=caffeinate
 alias cask='brew cask'
+alias get_exif='mdls '
 
 # GIT
-alias {git,github}="hub"
-alias g="git "
+# alias {git,github}="hub"
+alias g="git number "
 alias {gc,gcm,gcmsg}="gitCommitWithMessage "
 alias gl="g pull "
 alias gcl="g clone "
 alias glg="g log "
-alias ga="g add "
+alias {gs,gst}="g status"
+alias ga="g  add "
 alias gaa="g add --all"
-alias {gs,gst}="g status "
 alias gp="g push "
-alias gpsu="git push --set-upstream origin "
+alias gpsu="g push --set-upstream origin "
 alias gch="git checkout "
 alias gchb="gitNewBranch "
-alias gb="git branch "
-alias gd="git diff"
-alias gitconfig="git aliases"
-alias gm="git merge"
-alias gr="git rebase"
-alias gprune="git remote prune origin"
-alias gpr="git pull-request"
+alias gb="g branch "
+alias gd="g diff"
+alias gitconfig="sub ~/.gitconfig"
+alias gm="g merge"
+alias gr="g rebase"
+alias gprune="g remote prune origin"
+alias gpr="g pull-request"
+alias glast="g diff --name-only | xargs sub"
+alias gsyncbranches="git branch --merged | egrep -v \"^\*|master\" | xargs -n 1 git branch -d"
 
-#PROGRAMS
+# PROGRAMS
 alias chrome='open -a /Applications/Google\ Chrome.app/ '
 alias firefox='open -a /opt/homebrew-cask/Caskroom/firefox/latest/Firefox.app/ '
 alias safari='open -a /Applications/Safari.app/ '
 alias pms='/Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Scanner'
 
-#APPLE TWEAKS
+# APPLE TWEAKS
 alias normaldock='defaults write com.apple.dock static-only -bool FALSE && killAll Dock'
 alias staticdock='defaults write com.apple.dock static-only -bool TRUE && killAll Dock'
+
+# DOCKER
+alias b2d='boot2docker'
+alias dc='docker-compose'
+alias docker-clean-c='docker ps -a | cut -c-12 | xargs docker rm'
+alias docker-clean-i='docker rmi $(docker images | grep "<none>" | awk '\''{print($3)}'\'')'
+alias fix-b2d='boot2docker stop && boot2docker start && exec zsh'
+alias axon-boot='boot2docker stop && boot2docker up && resource && axon && dc start && sleep 15 && open http://dockerhost:3000 && c '
+alias axon-shell='docker exec -it axon_web_1 /bin/bash'
+alias dm='docker-machine  '
+
+# iOS PROGRAMMING
+alias xc='open $(git rev-parse --show-toplevel)/*.xcodeproj'
+alias reporoot='cd $(get rev-parse --show-toplevel)'
+
+# RAILS DEVELOPMENT
+alias nopids='rm -f ./tmp/pids/*.pid'
